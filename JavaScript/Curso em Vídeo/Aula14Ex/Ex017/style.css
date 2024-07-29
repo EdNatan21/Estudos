@@ -1,0 +1,71 @@
+*{
+    font: normal, 1em, Arial
+}
+
+body{
+    background-color: rgba(0, 0, 48, 0.897);
+    color: white;
+}
+
+header{
+    width: 500px;
+    height: 90px;
+    margin: 50px auto 0px auto;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    width: 450px;
+    height: 350px;
+    margin: auto;
+
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding-top: 40px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.596);
+}
+
+input{
+    margin: 10px 50px;
+}
+
+input#gerar{
+    margin: 0px 38%;
+}
+
+label{
+    margin: 16.5%;
+    font-size: 1.3em;
+}
+
+#info{
+    width: 300px;
+    height: 100px;
+    margin: 0px auto 30px auto;
+    padding-top: 10px;
+
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.596);
+}
+
+#tabu{
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.596);
+
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
