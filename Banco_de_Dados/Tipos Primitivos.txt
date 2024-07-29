@@ -1,0 +1,26 @@
+# Numérico
+  * Inteiro
+    - TinyInt, SmallInt, Int, MediumInt, BigInt
+  * Real
+    - Decimal, Float, Double, Real
+  * Lógico
+    - Bit, Boolean
+
+# Data/Tempo
+  * Date, DateTime, TimeStamp, Time, Year
+
+# Literal
+  * Caracteres
+    - Char (Fixo), VarChar (Varíavel)
+  * Texto
+    - TinyText, Text, MediumText, LongText
+  * Binário
+    - TinyBlob, Blob, MediumBlob, LongBlob
+  * Coleção
+    - Enum, Set
+
+# Espacial
+  * Geometry, Point, Polygon, MultiPolygon
+
+# Mais informações
+  <!-- https://horadecodar.com.br/tipos-primitivos-mysql/ -->
