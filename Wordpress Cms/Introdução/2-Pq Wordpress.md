@@ -1,0 +1,17 @@
+* Por que Wordpress?
+  - Mais de 50% da web utiliza
+    - Em relação aos sites que possuem CMS.
+  - Open Source
+    - É gratuito e de código livre.
+  - Php e MySql
+    - Fácil aprendizado e baixo custo de servidores.
+  - Mais de 11% dos eCommerces
+    - Utilizando o WooCommerce (Plugin de Wordpress).
+  - Comunidade gigantesca
+    - Sua duvida com certeza já foi tirada por alguém.
+  - Milhares de plugins e temas
+    - Permite soluções rápidas e personalizadas.
+  - Customização sem limites
+    - O limite é sua capacidade de codificar.
+  - Interface simples
+    - Bom para seu cliente. 
