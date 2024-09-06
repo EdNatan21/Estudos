@@ -250,6 +250,7 @@ num++;
 -->
 
 # Funções anônimas & parâmetros
+
   <!-- 
   void exibirDados(String nome, int idade, {double? altura}) {
     // ?? = testa se a variável é nula.
@@ -275,6 +276,7 @@ num++;
   -->
 
 # Classes e Objetos
+
   <!-- 
   // Classe
   class Casa {
@@ -319,6 +321,7 @@ num++;
   -->
 
 # Desafio (Classes e Objetos)
+
   <!-- 
   // Criar classe usuário que tenha dois atributos (usuário e senha)
   // Criar método para autenticar utilizando o if
@@ -373,6 +376,7 @@ num++;
   -->
 
 # Construtores
+
   <!-- 
   class Usuario {
     String? usuario;
@@ -419,6 +423,7 @@ num++;
   -->
 
 # Getter e Setter
+
   <!-- 
   class Conta {
     // Boa prática, usar _ para o valor não ser acessado sem usar get
@@ -449,6 +454,7 @@ num++;
   -->
 
 # Heranças
+
   <!-- 
   class Animal {
     String? cor;
@@ -489,6 +495,7 @@ num++;
   -->
 
 # Sobrescrita de métodos
+
   <!-- 
   class Animal {
     String? cor;
@@ -551,6 +558,7 @@ num++;
   -->
 
 # Modificadores Static e Final
+
   <!-- 
   class Configuracoes {
     // Static - utiliza para acessar classe sem instanciar.
@@ -583,6 +591,7 @@ num++;
   -->
 
 # Classes abstratas
+
   <!-- 
   abstract class Animal {
     String? cor;
@@ -621,6 +630,7 @@ num++;
   -->
 
 # Interface
+
   <!-- 
   // Pode-se dizer a grosso modo, que uma interface é um contrato que
   // ...quando assumido por uma classe deve ser implementado.
@@ -667,6 +677,7 @@ num++;
   -->
 
 # Mixins
+
   <!-- 
   // Mixins é uma maneira de utilizar códigos
   // ...em múltiplas hierarquias de classes.
@@ -718,6 +729,7 @@ num++;
   -->
 
 # Coleções - listas
+
   <!-- 
   // Coleções, são implementações de estrutura de dados,
   // que é utilizado para armazenar itens
@@ -763,6 +775,7 @@ num++;
   -->
 
 # Coleções - mapas
+
   <!-- 
   // Maps - oferece um indice customizado.
 
@@ -801,14 +814,305 @@ num++;
   -->
 
 # Widgets e Material design
-  - https://docs.flutter.dev/ui/widgets.
-  - https://m2.material.io/design.
+
+- https://docs.flutter.dev/ui/widgets.
+- https://m2.material.io/design.
+
+# Importar pacote flutter
+
+- import 'package:flutter/material.dart';
+
+# Colunas e linhas
+
+  <!-- 
+  import 'package:flutter/material.dart';
+
+  void main () {
+    runApp(const MaterialApp(
+      title: 'Frases do dia',
+      home: Row(children: [
+        Text(' t1 '),
+        Text(' t2 '),
+        Text(' t3 ')
+      ],) ,
+    ));
+  } 
+  -->
+
+# Formatação de texto
+
+  <!-- 
+  import 'package:flutter/material.dart';
+
+  void main () {
+    runApp(MaterialApp(
+      title: 'Frases do dia',
+      home: Container(
+        color: Colors.white,
+        child: const Column(
+          children: [
+            Text(
+                ' Lorem ipsum dolor sit amet,',
+              style: TextStyle(
+                fontSize: 35,
+                fontStyle: FontStyle.normal,
+                fontWeight: FontWeight.w100,
+                letterSpacing: 10,
+                wordSpacing: 0,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.red,
+                decorationStyle: TextDecorationStyle.solid,
+                color: Colors.green
+              ),
+            )
+          ],
+        ),
+      ),
+    ));
+  } 
+  -->
+
+# Botões
+
+  <!-- 
+  O TextButton vem com melhorias e faz parte do novo conjunto de botões no Flutter, que inclui também o ElevatedButton (substituindo o RaisedButton) e o OutlinedButton (substituindo o OutlineButton). 
+  -->
+
+  <!-- 
+  import 'package:flutter/material.dart';
+
+  void main () {
+    runApp(MaterialApp(
+      title: 'Frases do dia',
+      home: Container(
+        color: Colors.white,
+        child: Column(
+          children: [
+            TextButton(
+                onPressed: () {
+                  print('Botão Pressionado');
+                },
+                child: const Text(
+                  'Botão',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      decoration: TextDecoration.none
+                  ),
+                )
+            )
+          ],
+        ),
+      ),
+    ));
+  } 
+  -->
+
+# Espaçamentos
+
+  <!-- 
+  import 'package:flutter/material.dart';
+
+  void main () {
+    runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Frases do dia',
+      home: Container(
+        //color: Colors.white,
+        // definir espaçamento interno em cada lado
+        padding: EdgeInsets.all(0),
+        // definir espaçamento externo em casa lado
+        margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
+        // definir espaçamento em apenas um lado especifico
+        // margin: EdgeInsets.only(top: 40),
+        decoration: BoxDecoration(
+          border: Border.all(width: 3, color: Colors.white)
+        ),
+        child: const Column(
+          children: [
+            Text('t1'),
+            Padding(
+                padding: EdgeInsets.all(30),
+                child: Text('t2'),
+            ),
+            Text('t3')
+          ],
+        ),
+      ),
+    ));
+  } 
+  -->
+
+# Alinhamentos
+
+  <!-- 
+  import 'package:flutter/material.dart';
+
+  void main () {
+    runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Frases do dia',
+      home: Container(
+        margin: EdgeInsets.only(top: 40),
+        decoration: BoxDecoration(
+          border: Border.all(width: 3, color: Colors.white)
+        ),
+        child: const Row(
+            // Define o alinhamento principal
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // Define o alinhamento do eixo que cruza o eixo principal
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('T1'),
+              Text('T2'),
+              Text('T3')
+            ],
+        ),
+      ),
+    ));
+  }
+  -->
+
+# Imagens
+
+  <!-- 
+  import 'package:flutter/material.dart';
+
+  void main () {
+    runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Frases do dia',
+      home: Container(
+        margin: EdgeInsets.only(top: 40),
+        decoration: BoxDecoration(
+          border: Border.all(width: 3, color: Colors.white)
+        ),
+        child: Image.asset(
+          'imagens/dog.jpg',
+          fit: BoxFit.contain
+        ),
+      ),
+    ));
+  } 
+  -->
+
+# Layout base com Scaffold
+
+  <!-- 
+  import 'package:flutter/material.dart';
+
+  void main () {
+    runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Instagram'),
+          backgroundColor: Colors.red,
+        ),
+        body: const Padding(
+          padding: EdgeInsets.all(16),
+          child: Text('Conteúdo Principal'),
+        ),
+        bottomNavigationBar: const BottomAppBar(
+          color: Colors.lightBlue,
+          child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Texto1'),
+                Text('Texto2'),
+                Text('Texto3')
+              ],
+            ),
+          ),
+        ),
+      ) ,
+    ));
+  } 
+  -->
+
+# Widgets - Stateless & Stateful
+
+  <!-- 
+  import 'package:flutter/material.dart';
+
+  // Stateless - Widgets que não podem ser alterados
+  // Stateful - Widgets que podem ser alterados
+
+  void main () {
+    runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeStateful(),
+    ));
+  }
+
+  class HomeStateful extends StatefulWidget {
+    @override
+    State<HomeStateful> createState() => _State();
+  }
+
+  class _State extends State<HomeStateful> {
+    var _texto = 'Natan';
+    @override
+    Widget build(BuildContext context) {
+
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('Instagram'),
+          backgroundColor: Colors.red,
+        ),
+        body: Container(
+          child: Column(
+            children: [
+              ElevatedButton(
+                  onPressed: (){
+                    setState(() {
+                      _texto = 'Edson';
+                    });
+                  },
+                  child: Text('Clique Aqui')),
+              Text('Nome: ${_texto}'),
+            ],
+          ),
+        ),
+      );
+    }
+  }
+
+
+  class Home extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+
+      var _titulo = 'Instagram';
+
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(_titulo),
+          backgroundColor: Colors.red,
+        ),
+        body: const Padding(
+          padding: EdgeInsets.all(16),
+          child: Text('Conteúdo Principal'),
+        ),
+        bottomNavigationBar: const BottomAppBar(
+          color: Colors.lightBlue,
+          child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Texto1'),
+                Text('Texto2'),
+                Text('Texto3')
+              ],
+            ),
+          ),
+        ),
+      ) ;
+    }
+  } 
+  -->
 
 # 
-
-
-
-
-
-
-
